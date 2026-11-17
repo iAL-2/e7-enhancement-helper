@@ -1,4 +1,4 @@
-# E7 Equipment Helper
+# E7 Enhancement Helper
 
 A Windows desktop utility for evaluating equipment in **Epic Seven** using screenshot recognition.
 
