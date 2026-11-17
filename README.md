@@ -17,10 +17,10 @@ E7 Equipment Helper reads equipment directly from the game and recommends whethe
 ## Screenshots
 
 ### Bulk Equipment Evaluation
-![Bulk Equipment Evaluation](screenshots/single-item.png)
+![Bulk Equipment Evaluation](screenshots/bulk-item.png)
 
 ### Single Equipment Evaluation
-![Single Equipment Evaluation](screenshots/bulk-page.png)
+![Single Equipment Evaluation](screenshots/one-item.png)
 
 ### Scoring Breakdown
 ![Scoring Breakdown](screenshots/scoring-breakdown.png)
