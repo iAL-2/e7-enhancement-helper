@@ -16,6 +16,20 @@ E7 Equipment Helper reads equipment directly from the game and recommends whethe
 - **Advanced evaluation:** Supports set bonuses and penalties, modification recommendations, and borderline equipment.
 - **Detailed results:** Provides scoring breakdowns explaining why equipment qualifies or fails.
 
+## Screenshots
+
+### Bulk Equipment Evaluation
+![Bulk Equipment Evaluation](screenshots/single-item.png)
+
+### Single Equipment Evaluation
+![Single Equipment Evaluation](screenshots/bulk-page.png)
+
+### Scoring Breakdown
+![Scoring Breakdown](screenshots/scoring-breakdown.png)
+
+### Settings
+![Settings](screenshots/settings.png)
+
 ## Download and Installation
 
 Download the latest Windows ZIP from **[GitHub Releases](../../releases/latest)**.
