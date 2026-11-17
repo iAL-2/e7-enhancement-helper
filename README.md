@@ -4,8 +4,6 @@ A Windows desktop utility for evaluating equipment in **Epic Seven** using scree
 
 E7 Equipment Helper reads equipment directly from the game and recommends whether to **CONTINUE, STOP, or KEEP** based on configurable evaluation rules. It is designed to simplify equipment enhancement decisions without requiring manual stat entry.
 
-*Screenshots coming soon.*
-
 ## Features
 
 - **Bulk evaluation:** Recognizes and evaluates up to 16 equipment pieces simultaneously.
