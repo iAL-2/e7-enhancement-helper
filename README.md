@@ -2,7 +2,7 @@
 
 A Windows desktop utility for evaluating equipment in **Epic Seven** using screenshot recognition.
 
-E7 Equipment Helper reads equipment directly from the game and recommends whether to **CONTINUE, STOP, or KEEP** based on configurable evaluation rules. It is designed to simplify equipment enhancement decisions without requiring manual stat entry.
+E7 Enhancement Helper reads equipment directly from the game and recommends whether to **CONTINUE, STOP, or KEEP** based on configurable evaluation rules. It is designed to simplify equipment enhancement decisions without requiring manual stat entry.
 
 ## Features
 
@@ -13,6 +13,14 @@ E7 Equipment Helper reads equipment directly from the game and recommends whethe
 - **Configurable rules:** Speed, individual-stat quality, stat synergy, main-stat stacking, overall quality, and GS/ES thresholds.
 - **Advanced evaluation:** Supports set bonuses and penalties, modification recommendations, and borderline equipment.
 - **Detailed results:** Provides scoring breakdowns explaining why equipment qualifies or fails.
+
+## Companion Project — E7 Economy Lab
+
+E7 Economy Lab is a free, browser-based companion tool for exploring Epic Seven's resource economy, enhancement costs, and efficiency.
+
+Unlike E7 Enhancement Helper, which evaluates individual equipment pieces, Economy Lab focuses on the broader resource costs and tradeoffs involved in equipment enhancement and progression.
+
+**[Open E7 Economy Lab](https://ial-2.github.io/e7-economy-lab/)** — No installation required.
 
 ## Screenshots
 
@@ -33,7 +41,7 @@ E7 Equipment Helper reads equipment directly from the game and recommends whethe
 Download the latest Windows ZIP from **[GitHub Releases](../../releases/latest)**.
 
 1. Extract the entire ZIP to a folder of your choice.
-2. Run `E7EquipmentHelper.exe`.
+2. Run `E7EnhancementHelper.exe`.
 3. Launch Epic Seven in **English**.
 
 No separate Python installation is required. Keep the extracted application files together.
@@ -53,7 +61,7 @@ For Windows capture, keep the game window visible and unobstructed. Emulator cap
 ## How to Use
 
 1. Open a supported equipment screen in Epic Seven.
-2. Launch E7 Equipment Helper and select **Auto**, **ADB**, or **Windows** capture.
+2. Launch E7 Enhancement Helper and select **Auto**, **ADB**, or **Windows** capture.
 3. Keep the default evaluation settings or configure your own.
 4. Click **Capture and evaluate**.
 5. Review the recommendations and select an item to inspect its scoring breakdown.
@@ -62,7 +70,7 @@ The bulk enhancement screen displays results in a 4×4 grid matching the in-game
 
 ## Settings and Customization
 
-E7 Equipment Helper includes **two default evaluation presets** as starting points for different equipment enhancement preferences.
+E7 Enhancement Helper includes **two default evaluation presets** as starting points for different equipment enhancement preferences.
 1. Default
 2. Strict
 
@@ -111,7 +119,7 @@ Screenshots and debug logs are stored locally and are not automatically uploaded
 
 ## Disclaimer
 
-E7 Equipment Helper is an independent community project, unaffiliated with Smilegate or Super Creative.
+E7 Enhancement Helper is an independent community project, unaffiliated with Smilegate or Super Creative.
 
 The application uses screenshots only. It does not require account credentials, access game memory, or automate in-game equipment actions.
 
