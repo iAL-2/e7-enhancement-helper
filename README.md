@@ -2,25 +2,25 @@
 
 A Windows desktop utility for evaluating equipment in **Epic Seven** using screenshot recognition.
 
-E7 Enhancement Helper reads equipment directly from the game and recommends whether to **CONTINUE, STOP, or KEEP** based on configurable evaluation rules. It is designed to simplify equipment enhancement decisions without requiring manual stat entry.
+E7 Enhancement Helper reads equipment directly from the game and recommends whether to **CONTINUE, STOP, or KEEP** based on configurable evaluation rules. No manual stat entry is required.
 
 ## Features
 
 - **Bulk evaluation:** Recognizes and evaluates up to 16 equipment pieces simultaneously.
-- **Multiple screens:** Supports bulk enhancement, equipment bag, and individual equipment detail screens.
+- **Multiple screens:** Supports bulk enhancement, equipment bag, individual equipment enhancement, and modification screens.
 - **Equipment scoring:** Calculates GS (Gear Score), recognizes in-game ES (Equipment Score) where available, and applies contextual AS (Adjusted Score).
-- **Enhancement projections:** Evaluates current stats and maximum remaining enhancement potential.
-- **Configurable rules:** Speed, individual-stat quality, stat synergy, main-stat stacking, overall quality, and GS/ES thresholds.
+- **Enhancement evaluation:** Supports probability-based and upper bound evaluation.
+- **Configurable rules:** Speed, individual-stat quality, stat synergy, main-stat stacking, overall quality, probability, and GS/ES thresholds.
 - **Advanced evaluation:** Supports set bonuses and penalties, modification recommendations, and borderline equipment.
 - **Detailed results:** Provides scoring breakdowns explaining why equipment qualifies or fails.
+- **Language support:** Supports all Epic Seven game languages on the bulk enhancement screen.
+- **Cached reevaluation:** Reevaluates captured equipment when evaluation settings or methods are changed.
 
-## Companion Project — E7 Economy Lab
+## Companion Project: E7 Economy Lab
 
-E7 Economy Lab is a free, browser-based companion tool for exploring Epic Seven's resource economy, enhancement costs, and efficiency.
+E7 Economy Lab is a free, browser-based tool for exploring Epic Seven's resource economy, enhancement costs, and efficiency. It also models the differences between probability-based and upper bound evaluation.
 
-Unlike E7 Enhancement Helper, which evaluates individual equipment pieces, Economy Lab focuses on the broader resource costs and tradeoffs involved in equipment enhancement and progression.
-
-**[Open E7 Economy Lab](https://ial-2.github.io/e7-economy-lab/)** — No installation required.
+**[Open E7 Economy Lab](https://ial-2.github.io/e7-economy-lab/)**
 
 ## Screenshots
 
@@ -42,9 +42,11 @@ Download the latest Windows ZIP from **[GitHub Releases](../../releases/latest)*
 
 1. Extract the entire ZIP to a folder of your choice.
 2. Run `E7EnhancementHelper.exe`.
-3. Launch Epic Seven in **English**.
+3. Launch Epic Seven.
 
 No separate Python installation is required. Keep the extracted application files together.
+
+All game languages are supported for bulk enhancement. Other equipment screens currently require English.
 
 ## Supported Platforms
 
@@ -68,22 +70,24 @@ For Windows capture, keep the game window visible and unobstructed. Emulator cap
 
 The bulk enhancement screen displays results in a 4×4 grid matching the in-game equipment positions. Bag and detail screens evaluate the currently displayed item, not the entire inventory.
 
+Changing evaluation settings does not require capturing the equipment again.
+
 ## Settings and Customization
 
-E7 Enhancement Helper includes **two default evaluation presets** as starting points for different equipment enhancement preferences.
-1. Default
-2. Strict
+Two evaluation presets are included:
 
-For most players, I recommend using one of the default presets and adjusting only:
+1. **Default:** Uses probability-based evaluation for both general equipment and speed.
+2. **Tester1:** A tester's configuration with upper bound speed evaluation, different ES thresholds, and custom set adjustments.
+
+For most players, I recommend using one of these presets and adjusting only:
 
 - **Speed:** Set your preferred speed qualification and +15 keeper thresholds.
+- **Probability:** Set the minimum probability required for equipment to qualify.
 - **GS/ES Pass Rule:** Enable and configure minimum Gear Score or Equipment Score requirements at different enhancement stages.
 
-Most other evaluation settings are also configurable, including individual-stat quality, stat synergy, overall quality thresholds, set-specific bonuses and penalties, modification recommendations, and borderline evaluations.
+Other configurable settings include individual-stat quality, stat synergy, overall quality thresholds, set-specific bonuses and penalties, modification recommendations, and borderline evaluations.
 
-Advanced settings are available for players who want finer control over how equipment is evaluated. However, changing them is not necessary for normal use.
-
-**Recommendations are based on your selected settings, not universal equipment standards.**
+I only recommend changing advanced settings if you understand the evaluation logic.
 
 ## Understanding Recommendations
 
@@ -91,19 +95,22 @@ Advanced settings are available for players who want finer control over how equi
 |---|---|
 | **CONTINUE** | Unfinished equipment passes at least one evaluation rule. |
 | **STOP** | Equipment fails the configured qualification rules. |
-| **STOP - BORDERLINE** | Equipment narrowly misses an eligible quality threshold. |
+| **STOP - BORDERLINE** | Equipment narrowly misses a configured qualification threshold. |
 | **KEEP** | Fully enhanced equipment passes at least one rule. |
 | **KEEP IF MODIFIED** | Equipment may qualify with a suitable stat modification. |
 | **UNAVAILABLE / FAILED** | Equipment could not be reliably evaluated. |
 
-Equipment only needs to pass one enabled qualification rule. Enhancement projections assume maximum possible future rolls rather than their probability.
+Equipment only needs to pass one enabled qualification rule.
+
+Probability-based evaluation is used by default and calculates the probability of unfinished equipment reaching a keeper target. Upper bound evaluation instead assumes maximum possible future rolls.
 
 **STOP does not necessarily mean an item is useless.** Recommendations depend on your configured criteria and do not account for your specific heroes or equipment inventory.
 
 ## Known Limitations
 
-- Supports Lv85/88 Epic and Heroic equipment. Lv90 is recognized but evaluation is based on 85 gear. 
-- Recognition requires supported resolutions, layouts, and English-language game text.
+- Supports Lv85/88 Epic and Heroic equipment. Lv90 is recognized but evaluation is based on Lv85 gear.
+- Recognition requires supported resolutions and layouts.
+- Language support outside of bulk enhancement is limited to English.
 - Lv85 enhancement projections exclude reforge bonuses.
 - Locked or unrecognized substats cannot contribute to evaluation.
 - Modification recommendations are hypothetical and require manual verification.
